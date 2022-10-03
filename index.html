@@ -18,8 +18,8 @@
       <div class="row py-lg-3">
         <div class="col-lg-6 col-md-8 mx-auto">
           <h1 class="fw-light"><img src="img/japflix.png" alt=""></h1>
-          <input type="search" class="form-control" name="buscar" id="inputBuscar" placeholder="Ej.: The Lion King">
-          <button class="btn btn-primary m-2" id="btnBuscar">Buscar</button>
+          <input type="search" class="form-control" name="buscar" id="inputBuscar" placeholder="Ej.: The Lion King" value="">
+          <button class="btn btn-primary m-2" id="btnBuscar" onclick="Buscar()">Buscar</button>
         </div>
       </div>
     </div>
@@ -27,6 +27,30 @@
     <div class="album">
       <ul class="list-group container" id="lista">
       </ul>
+    </div>
+
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div id="offcanvasText">
+        </div>
+        <hr>
+        <p id="offcanvasGeneros" style="color: DimGrey; text-align: left;"></p>
+      </div>
+      <div class="dropdown mt-3">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" style="float: right; margin: 0 1rem; margin-top: -4rem;">
+          More
+        </button>
+        <ul class="dropdown-menu">
+          <li><p class="dropdown-item">Year: <span id="year" style="float: right"></span></p></li>
+          <li><p class="dropdown-item">Runtime: <span id="runtime" style="float: right"></span></p></li>
+          <li><p class="dropdown-item">Budget: <span id="budget" style="float: right"></span></p></li>
+          <li><p class="dropdown-item">Revenue: <span id="revenue" style="float: right"></span></p></li>
+        </ul>
+      </div>
     </div>
   </main>
 
